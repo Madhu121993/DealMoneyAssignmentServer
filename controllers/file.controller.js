@@ -18,7 +18,6 @@ module.exports = router;
  * @description:Upload data.
  */
 function uploadFile(req, res) {
-    console.log("hiiii")
     uploadService.uploadFile(req).then(function(data) {
             res.send(data);
         })
@@ -37,7 +36,6 @@ function downloadFile(req, res) {
             res.send(data);
         })
         .catch(function(err) {
-            console.log("err in controller",err)
             res.status(400).send(err);
         });
 }

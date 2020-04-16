@@ -17,7 +17,7 @@ app.get('/',(req,res)=>{
     res.send('footer')
 })
 app.get('/get',(req,res)=>{
-    console.log("server")
+    
     res.send("send")
 })
 

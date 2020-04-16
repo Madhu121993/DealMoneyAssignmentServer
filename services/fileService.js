@@ -7,7 +7,7 @@
 var service = {};
 var Q = require('q');
 var mongo = require('mongoskin');
-var config = require('../config.json')
+var config = require('../config.json')//config
 var db = mongo.db(config.connectionString, { native_parser: true });    // mongodb connectivity
 db.bind('UploadData');  //add collection in DB
 
@@ -31,7 +31,6 @@ function uploadFile(req,res){
 
 // Get json data from DB
 function downloadFile(req,res){
-console.log("in download")
     var deffered = Q.defer();
    db.UploadData.find({}).toArray(function (err, data) {
     if (err) deffered.reject(err);
